@@ -10,6 +10,7 @@ body {
   overflow: hidden;
   height: 100vh;
   position: relative;
+  
 }
 
 .titulo {
@@ -62,7 +63,7 @@ body {
   height: 220px;
   border-radius: 100%;
   position: absolute;
-  left: 300px;
+  left: 24%;
   z-index: 1;
   top: 120px;
 }
@@ -83,7 +84,7 @@ body {
   border-radius: 100%;
   position: absolute;
   top: 280px;
-  left: 750px;
+  left: 60%;
   z-index: 1;
 }
 
@@ -116,7 +117,7 @@ body {
 
 .present500 {
   position: absolute;
-  left: 800px;
+  left: 60%;
   top: 90px;
 }
 
