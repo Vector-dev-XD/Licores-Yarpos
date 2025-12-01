@@ -50,6 +50,41 @@ header {
   color: #222222;
 }
 
+.desple {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.opciondes {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f1c24c;
+  width: 100%;
+  display: none;
+  text-align: center;
+}
+
+.opciondes li a {
+  padding: 10px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.opciondes li a:hover {
+  background-color: #d7a63a;
+}
+
+.desple:hover .opciondes {
+  display: block;
+}
+
 .hero {
   background: #ffdd80;
   padding: 80px 20px;
