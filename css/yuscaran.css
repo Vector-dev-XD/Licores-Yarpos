@@ -273,15 +273,19 @@ body {
   }
 
   .img1 {
-    height: 120px;
+    height: 190px;
+    margin-bottom: 20px;
   }
 
   .img2 {
-    height: 150px;
+    height: 200px;
+    margin-bottom: 20px;
   }
 
   .img3 {
-    height: 100px;
+    height: 170px;
+    margin-bottom: 20px;
+    margin-right: 5px;
   }
 
   .desc {
