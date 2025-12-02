@@ -63,8 +63,12 @@ body {
   border-radius: 100%;
   position: absolute;
   left: 24%;
-  z-index: 1;
   top: 120px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
 
 .circu2 {
@@ -74,6 +78,10 @@ body {
   border-radius: 100%;
   position: absolute;
   left: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
 }
 
 .circu3 {
@@ -85,6 +93,28 @@ body {
   top: 280px;
   left: 60%;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.present1 {
+  position: absolute;
+  left: 90px;
+  top: 145px;
+}
+
+.present2 {
+  position: absolute;
+  left: 60%;
+  top: 170px;
+}
+
+.present3 {
+  position: absolute;
+  left: 900px;
+  top: 450px;
 }
 
 .present1 span {
@@ -126,24 +156,6 @@ body {
   color: #fff;
 }
 
-.present1 {
-  position: absolute;
-  left: 40px;
-  top: 125px;
-}
-
-.present2 {
-  position: absolute;
-  left: 60%;
-  top: 90px;
-}
-
-.present3 {
-  position: absolute;
-  left: 900px;
-  top: 450px;
-}
-
 .desc {
   width: 70%;
   margin: 20px auto 0 auto;
@@ -159,4 +171,137 @@ body {
   line-height: 1.5;
 }
 
+.img1 {
+  transform: rotate(27deg);
+  position: absolute;
+  top: -30px;
+}
 
+.img2 {
+  width: 770px;
+  position: absolute;
+  top: -50px;
+}
+
+.img3 {
+  width: 350px;
+  transform: rotate(-27deg);
+  position: absolute;
+  top: -20px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: auto;
+    padding-bottom: 40px;
+  }
+
+  .titulo {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid #333;
+    width: 80%;
+    margin: 0 auto 30px auto;
+  }
+
+  .titulo h1 {
+    font-size: 28px;
+  }
+
+  .circusuper,
+  .circuizquier {
+    display: none;
+  }
+
+  .producto {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 40px auto;
+    position: relative;
+  }
+
+  .present1,
+  .present2,
+  .present3 {
+    position: static;
+    text-align: left;
+    width: 50%;
+    margin: 0;
+  }
+
+  .present1 h3,
+  .present2 h3,
+  .present3 h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .present1 span,
+  .present2 span,
+  .present3 span {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .present1 .precio,
+  .present2 .precio,
+  .present3 .precio {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .circu1,
+  .circu2,
+  .circu3 {
+    position: static;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img1 {
+    position: static;
+    transform: none;
+    margin-top: -30px;
+    height: 170px;
+  }
+
+  .img2 {
+    position: static;
+    transform: none;
+    margin-top: -20px;
+    height: 200px;
+  }
+
+  .img3 {
+    position: static;
+    transform: none;
+    margin-top: -20px;
+    height: 130px;
+    margin-right: 9px;
+  }
+
+  .desc {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  .desc p {
+    font-size: 13px;
+    color: #333;
+  }
+}
