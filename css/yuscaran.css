@@ -9,11 +9,19 @@ body {
   font-family: "Poppins", sans-serif;
   overflow: hidden;
   height: 100vh;
+}
+
+.conten {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   position: relative;
+  height: 100vh;
 }
 
 .titulo {
-  padding: 60px 40px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .titulo h1 {
@@ -63,7 +71,7 @@ body {
   border-radius: 100%;
   position: absolute;
   left: 24%;
-  top: 120px;
+  top: 18vh;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -77,7 +85,8 @@ body {
   height: 350px;
   border-radius: 100%;
   position: absolute;
-  left: 35%;
+  left: 36%;
+  top: 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,8 +99,8 @@ body {
   height: 170px;
   border-radius: 100%;
   position: absolute;
-  top: 280px;
-  left: 60%;
+  left: 57%;
+  top: 40vh;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -101,52 +110,30 @@ body {
 
 .present1 {
   position: absolute;
-  left: 90px;
-  top: 145px;
+  left: 9%;
+  top: 20vh;
 }
 
 .present2 {
   position: absolute;
-  left: 60%;
-  top: 170px;
+  left: 62%;
+  top: 22vh;
 }
 
 .present3 {
   position: absolute;
-  left: 900px;
-  top: 450px;
+  left: 72%;
+  top: 48vh;
 }
 
-.present1 span {
-  margin-left: 87px;
-}
-
-.present2 span {
-  margin-left: 87px;
-}
-
+.present1 span,
+.present2 span,
 .present3 span {
-  margin-left: 87px;
+  margin-left: 10px;
 }
 
-.present1 .precio {
-  font-family: "Poppins", sans-serif;
-  background-color: #e7b01d;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.present2 .precio {
-  font-family: "Poppins", sans-serif;
-  background-color: #e7b01d;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-weight: 700;
-  color: #fff;
-}
-
+.present1 .precio,
+.present2 .precio,
 .present3 .precio {
   font-family: "Poppins", sans-serif;
   background-color: #e7b01d;
@@ -158,10 +145,11 @@ body {
 
 .desc {
   width: 70%;
-  margin: 20px auto 0 auto;
+  margin: 0;
   text-align: justify;
-  margin-top: 370px;
-  margin-left: 240px;
+  position: absolute;
+  bottom: 5vh;
+  left: 20%;
 }
 
 .desc p {
@@ -172,6 +160,7 @@ body {
 }
 
 .img1 {
+  width: 470px;
   transform: rotate(27deg);
   position: absolute;
   top: -30px;
@@ -195,6 +184,11 @@ body {
     height: auto;
     overflow-y: auto;
     padding-bottom: 40px;
+  }
+
+  .conten {
+    max-width: none;
+    height: auto;
   }
 
   .titulo {
@@ -264,32 +258,30 @@ body {
     height: 160px;
     margin: 0;
     flex-shrink: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .img1 {
-    position: static;
-    transform: none;
-    margin-top: -30px;
-    height: 170px;
-  }
-
-  .img2 {
-    position: static;
-    transform: none;
-    margin-top: -20px;
-    height: 200px;
-  }
-
+  .img1,
+  .img2,
   .img3 {
     position: static;
     transform: none;
-    margin-top: -20px;
-    height: 130px;
-    margin-right: 9px;
+    width: auto;
+    height: auto;
+  }
+
+  .img1 {
+    height: 120px;
+  }
+
+  .img2 {
+    height: 150px;
+  }
+
+  .img3 {
+    height: 100px;
   }
 
   .desc {
@@ -298,6 +290,7 @@ body {
     text-align: center;
     margin-left: auto;
     margin-top: 20px;
+    position: static;
   }
 
   .desc p {
