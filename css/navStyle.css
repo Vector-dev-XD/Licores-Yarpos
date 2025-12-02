@@ -21,7 +21,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  z-index: 2;
+  z-index: 12;
 }
 
 .menu{
@@ -29,17 +29,17 @@ header {
   padding: 6px;
   height: 45px;
   width: 45px;
-  outline: 2px solid white;
+  outline: 1px solid white;
   display: none;
 }
 
 #sideBar{
   padding-top: 60px;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width:240px;
   background-color: #000000;
-  z-index: 1;
+  z-index: 10;
   transform: translateX(-100%);
   transition: all 0.5s ease;
   display: none;
