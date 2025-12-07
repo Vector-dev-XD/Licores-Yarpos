@@ -67,8 +67,8 @@ body {
 
 .circu2 {
   background-color: #ba88a3;
-  width: 400px;
-  height: 400px;
+  width: 340px;
+  height: 340px;
   border-radius: 100%;
   position: absolute;
   left: 30%;
@@ -81,11 +81,11 @@ body {
 
 .circu3 {
   background-color: #d7c87b;
-  width: 310px;
-  height: 310px;
+  width: 260px;
+  height: 260px;
   border-radius: 100%;
   position: absolute;
-  left: 55%;
+  left: 52%;
   top: 35vh;
   z-index: -1;
   display: flex;
@@ -96,13 +96,13 @@ body {
 
 .present2 {
   position: absolute;
-  left: 17%;
+  left: 15%;
   top: 30vh;
 }
 
 .present3 {
   position: absolute;
-  left: 78%;
+  left: 75%;
   top: 60vh;
 }
 
@@ -138,13 +138,13 @@ body {
 }
 
 .img2 {
-  width: 770px;
+  width: 720px;
   position: absolute;
   top: -50px;
 }
 
 .img3 {
-  width:650px;
+  width:610px;
   position: absolute;
   top: -50px;
 }

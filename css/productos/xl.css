@@ -80,8 +80,8 @@ body {
 
 .circu1 {
   background-color: #9ab56d;
-  width: 350px;
-  height: 350px;
+  width: 330px;
+  height: 330px;
   border-radius: 100%;
   position: absolute;
   left: 15%;
@@ -94,8 +94,8 @@ body {
 
 .circu2 {
   background-color: #a3993a;
-  width: 350px;
-  height: 350px;
+  width: 330px;
+  height: 330px;
   border-radius: 100%;
   position: absolute;
   left: 35%;
@@ -108,8 +108,8 @@ body {
 
 .circu3 {
   background-color: #b4682e;
-  width: 350px;
-  height: 350px;
+  width: 330px;
+  height: 330px;
   border-radius: 100%;
   position: absolute;
   left: 55.5%;
@@ -123,14 +123,14 @@ body {
 
 .present1 {
   position: absolute;
-  left: 5%;
+  left: 2%;
   top: 20vh;
   width: 300px;
 }
 
 .present2 {
   position: absolute;
-  left: 39%;
+  left: 42%;
   top: 12vh;
   width: 300px;
 }
@@ -192,19 +192,19 @@ body {
 }
 
 .img1 {
-  width: 700px;
+  width: 680px;
   position: absolute;
   top: -35px;
 }
 
 .img2 {
-  width: 715px;
+  width: 695px;
   position: absolute;
   top: -46px;
 }
 
 .img3 {
-  width: 700px;
+  width:  682px;
   position: absolute;
   top: -35px;
 }
@@ -310,7 +310,7 @@ body {
 
   .img2 {
     height: 170px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .img3 {

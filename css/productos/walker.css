@@ -66,11 +66,11 @@ body {
 
 .circu2 {
   background-color: #786350;
-  width: 430px;
-  height: 430px;
+  width: 360px;
+  height: 360px;
   border-radius: 100%;
   position: absolute;
-  left: 33%;
+  left: 35%;
   top: 20vh;
   display: flex;
   justify-content: center;
@@ -114,9 +114,9 @@ body {
 }
 
 .img2 {
-  width: 930px;
+  width: 810px;
   position: absolute;
-  top: -70px;
+  top: -65px;
 }
 
 @media screen and (max-width: 768px) {
