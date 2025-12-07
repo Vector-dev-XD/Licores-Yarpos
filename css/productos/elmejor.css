@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ededed;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.conten {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+}
+
+.titulo {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.titulo h1 {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #1c1c1c;
+}
+
+.titulo h1 span {
+  color: #89915b;
+  font-weight: bold;
+}
+
+.circusuper {
+  position: absolute;
+  top: -150px;
+  right: -200px;
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  border: 60px solid #a5392a;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  background: transparent;
+  z-index: -1;
+}
+
+.circuizquier {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  bottom: -150px;
+  left: -180px;
+  border-radius: 50%;
+  border: 60px solid #89915b;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  background: transparent;
+  z-index: -1;
+}
+
+.circudere {
+  position: absolute;
+  width: 370px;
+  height: 370px;
+  bottom: -150px;
+  right: -200px;
+  border-radius: 50%;
+  border: 60px solid #595d34;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  background: transparent;
+  z-index: -1;
+}
+
+.circu1 {
+  background-color: #a5392a;
+  width: 220px;
+  height: 220px;
+  border-radius: 100%;
+  position: absolute;
+  left: 24%;
+  top: 45vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.circu2 {
+  background-color: #d4bd56;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  position: absolute;
+  left: 36%;
+  top: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.circu3 {
+  background-color: #89915b;
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  position: absolute;
+  left: 57%;
+  top: 20vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.present1 {
+  position: absolute;
+  left: 8%;
+  top: 50vh;
+}
+
+.present2 {
+  position: absolute;
+  left: 30%;
+  top: 17vh;
+}
+
+.present3 {
+  position: absolute;
+  left: 70%;
+  top: 22vh;
+}
+
+.present1 span,
+.present2 span,
+.present3 span {
+  margin-left: 80px;
+}
+
+.present1 .precio,
+.present2 .precio,
+.present3 .precio {
+  font-family: "Poppins", sans-serif;
+  background-color: #a3b47b;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.desc {
+  width: 65%;
+  margin: 0;
+  text-align: justify;
+  position: absolute;
+  bottom: 5vh;
+  left: 20%;
+}
+
+.desc p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.img1 {
+  width: 470px;
+  transform: rotate(20deg);
+  position: absolute;
+  top: -30px;
+}
+
+.img2 {
+  width: 750px;
+  position: absolute;
+  top: -75px;
+}
+
+.img3 {
+  width: 390px;
+  transform: rotate(-27deg);
+  position: absolute;
+  top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-y: auto;
+    padding-bottom: 40px;
+  }
+
+  .conten {
+    max-width: none;
+    height: auto;
+  }
+
+  .titulo {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid #333;
+    width: 80%;
+    margin: 0 auto 30px auto;
+  }
+
+  .titulo h1 {
+    font-size: 28px;
+  }
+  .circudere,
+  .circusuper,
+  .circuizquier {
+    display: none;
+  }
+
+  .producto {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto 40px auto;
+    position: relative;
+  }
+
+  .present1,
+  .present2,
+  .present3 {
+    position: static;
+    text-align: left;
+    width: 50%;
+    margin: 0;
+  }
+
+  .present1 h3,
+  .present2 h3,
+  .present3 h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .present1 span,
+  .present2 span,
+  .present3 span {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .present1 .precio,
+  .present2 .precio,
+  .present3 .precio {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .circu1,
+  .circu2,
+  .circu3 {
+    position: static;
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img1,
+  .img2,
+  .img3 {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+  }
+
+  .img1 {
+    height: 180px;
+    margin-bottom: 30px;
+  }
+
+  .img2 {
+    height: 160px;
+    margin-bottom: 10px;
+  }
+
+  .img3 {
+    height: 130px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+  }
+
+  .desc {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 20px;
+    position: static;
+  }
+
+  .desc p {
+    font-size: 13px;
+    color: #333;
+  }
+}
