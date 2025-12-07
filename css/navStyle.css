@@ -12,9 +12,8 @@ body {
 
 header {
   background: #222222;
-  backdrop-filter: blur(10px);
   color: #231f20;
-  padding: 0px 40px;
+  padding: 0px 20px;
   width: 100%;
   display: flex;
   position: fixed;
@@ -81,7 +80,9 @@ header {
 }
 
 .logo {
-  width: 150px;
+  position: absolute;
+  left: 20px;
+  width: 130px;
   height: 45px;
 }
 
@@ -185,6 +186,11 @@ a{
 
   #sideBar{
     display: block;
+  }
+
+  .logo {
+    left: 0;
+    position: relative;
   }
 
   

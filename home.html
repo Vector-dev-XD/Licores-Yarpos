@@ -5,16 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casita</title>
     <link rel="stylesheet" href="css/homeStyle.css">
-    <link rel="stylesheet" href="css/scrollAnimation.css">
+    <link rel="stylesheet" href="css/navStyle.css">
 </head>
 <body>
-
 <div id="navbar-container">
+    <input type="checkbox" id="sideOption" hidden>
+    <header class="header">
+      <label for="sideOption">
+        <div class="menu" hidden>
+            <img class="menuIcon" src="./img/inicio/menuIcon.png" >
+        </div>
+      </label>
+      <img src="img/YarposLogo.png" class="logo" />
+      <nav class="nav">
+        <div class="navItems" hidden>
+          <a href="./home.html">Inicio</a>
+          <a href="./productos.html">Productos</a>
+          <a href="#">Ubicación</a>
+
+          <div class="desple">
+            <a href="#">Sobre Nosotros</a>
+            <ul class="opciondes">
+              <li><a href="#">Visión</a></li>
+              <li><a href="#">Misión</a></li>
+              <li><a href="#">Historia</a></li>
+            </ul>
+          </div>
+          <a href="#">Contactos</a>
+        </div>
+      </nav>
+    </header>
+    <aside id="sideBar">
+      <ul class="sideMenu">
+        <li class="sideOption">
+          <img src="./img/inicio/homeIcon.png" class="sideOpIcon"><a href="#">Inicio</a></li>
+        <li class="sideOption">
+          <img src="./img/inicio/boxIcon.png" class="sideOpIcon"><a href="#">Productos</a></li>
+        <li class="sideOption">
+          <img src="./img/inicio/mapIcon.png" class="sideOpIcon"><a href="#">Ubicacion</a></li>
+        <li class="sideOption">
+          <img src="./img/inicio/aboutUsIcon.png" class="sideOpIcon"><a href="#">Sobre Nosotros</a></li>
+        <li class="sideOption">
+          <img src="./img/inicio/contactIcon.png" class="sideOpIcon"><a href="#">Contacto</a></li>
+      </ul>
+    </aside>
 </div>
 
 <div class="pantalla1" id="section1">
     <div class="background1">
-        <img src="img/homeResources/Yuscaran.png" id="yuscaran" class="scroll-anim">
+        <div class="recorteYuscaran">
+            <img src="img/homeResources/Yuscaran.png" id="yuscaran" class="scroll-anim">
+        </div>
         <div class="arc scroll-anim">
         </div>
         <img src="img/homeResources/arcType1.png" id="arc1" class="scroll-anim">
