@@ -1,0 +1,98 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pantalla{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.card {
+    width: 500px;
+    max-width: 90%;
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.vision-background {
+    background: linear-gradient(45deg, #eaba42,#ffdc84, #eaba42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 20rem;
+}
+
+.mision-background {
+    background: linear-gradient(45deg, #ededed,#ededed, #c9ccd3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 20rem;
+}
+
+/* Imágenes */
+.vision-inner img,
+.mision-inner img{
+    width: clamp(80px, 25%, 150px);
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Textos */
+.vision-text-container,
+.mision-text-container {
+    text-align: center;
+}
+
+.vision-text-container h1,
+.mision-text-container h1{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.vision-text-container p,
+.mision-text-container p{
+    font-size: clamp(0.95rem, 2.3vw, 1.2rem);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .pantalla {
+        padding: 20px;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
