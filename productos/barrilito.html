@@ -3,50 +3,139 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BARRILITO | PRESENTACIONES</title>
-    <link rel="stylesheet" href="/css/productos/barrilito.css" />
+    <title>Barrilito</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/navStyle.css" />
+    <link rel="stylesheet" href="/css/productViews.css" />
   </head>
   <body>
-    <div class="conten">
-      <header class="titulo">
-        <h1><span>BARRILITO</span> | <b>PRESENTACIONES</b></h1>
+    <div id="navbar-container">
+      <input type="checkbox" id="sideOption" hidden />
+      <header class="header">
+        <label for="sideOption">
+          <div class="menu" hidden>
+            <img class="menuIcon" src="/img/inicio/menuIcon.png" />
+          </div>
+        </label>
+        <img src="/img/YarposLogo.png" class="logo" />
+        <nav class="nav">
+          <div class="navItems" hidden>
+            <a href="/home.html">Inicio</a>
+            <a href="/productos.html">Productos</a>
+            <a href="#">Ubicación</a>
+
+            <div class="desple">
+              <a href="#">Sobre Nosotros</a>
+              <ul class="opciondes">
+                <li><a href="#">Visión</a></li>
+                <li><a href="#">Misión</a></li>
+                <li><a href="#">Historia</a></li>
+              </ul>
+            </div>
+            <a href="#">Contactos</a>
+          </div>
+        </nav>
       </header>
-
-      <div class="circusuper"></div>
-
-      <div class="circuizquier"></div>
-
-      <div class="producto">
-        <div class="circu2">
-          <img src="/img/barrilito/barrilitro.png" alt="" class="img2" />
-        </div>
-
-        <div class="present2">
-          <h3>PRESENTACIÓN 1000ML</h3>
-          <p>Precio: <span class="precio">57 Lps.</span></p>
+      <aside id="sideBar">
+        <ul class="sideMenu">
+          <li class="sideOption">
+            <img src="/img/inicio/homeIcon.png" class="sideOpIcon" /><a href="#"
+              >Inicio</a
+            >
+          </li>
+          <li class="sideOption">
+            <img src="/img/inicio/boxIcon.png" class="sideOpIcon" /><a href="#"
+              >Productos</a
+            >
+          </li>
+          <li class="sideOption">
+            <img src="/img/inicio/mapIcon.png" class="sideOpIcon" /><a href="#"
+              >Ubicacion</a
+            >
+          </li>
+          <li class="sideOption">
+            <img src="/img/inicio/aboutUsIcon.png" class="sideOpIcon" /><a
+              href="#"
+              >Sobre Nosotros</a
+            >
+          </li>
+          <li class="sideOption">
+            <img src="/img/inicio/contactIcon.png" class="sideOpIcon" /><a
+              href="#"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <div class="pantalla">
+      <div class="product-container">
+        <div class="banner-container">
+          <div class="backbanner"></div>
+          <img src="/img/barrilito/barrilitro.png" class="back-image" />
         </div>
       </div>
 
-      <div class="producto">
-        <div class="circu3">
-          <img src="/img/barrilito/barrimedio.png" alt="" class="img3" />
+      <div class="detail-container">
+        <h2 class="product-tittle">BARRILITO</h2>
+        <div class="tag-container">
+          <div class="tag">
+            <p>Tradicion</p>
+          </div>
+          <div class="tag">
+            <p>Honduras</p>
+          </div>
         </div>
-
-        <div class="present3">
-          <h3>PRESENTACIÓN 500ML</h3>
-          <p>Precio: <span class="precio">32 Lps.</span></p>
+        <div class="description-container">
+          <p>
+            Aguardiente tradicional Barrilito es elaborado a partir de alcohol
+            de caña. Presenta un cuerpo claro y transparente, con aroma suave y
+            carácter directo típico de los aguardientes artesanales.
+          </p>
         </div>
-      </div>
+        <div class="sizes-container">
+          <div class="card-container">
+            <img src="/img/barrilito/barrilitro.png" class="card-image" t />
+            <div class="card-details">
+              <div class="details">
+                <h3>Tamaño</h3>
+                <h2>Grande</h2>
+                <div class="content-tag">
+                  <p><b>1000 ml</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p><b>57Lps</b></p>
+            </div>
+          </div>
+          <div class="card-container">
+            <img
+              src="/img/barrilito/barrimedio.png"
+              class="card-image"
+    
+            />
+            <div class="card-details">
+              <div class="details">
+                <h3>Tamaño</h3>
+                <h2>Mediano</h2>
+                <div class="content-tag">
+                  <p><b>250 ml</b></p>
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <p><b>32Lps</b></p>
+            </div>
 
-      <div class="desc">
-        <p>
-          Aguardiente tradicional Barrilito es elaborado a partir de alcohol de
-          caña. Presenta un cuerpo claro y transparente, con aroma suave y
-          carácter directo típico de los aguardientes artesanales. Es una opción
-          común para consumo local y mezclas, disponible en presentaciones de
-          diferentes tamaños. Su perfil simple y ligero lo hace adecuado para
-          preparaciones variadas.
-        </p>
+            <div class="price">
+              <p><b>18Lps</b></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
