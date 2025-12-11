@@ -1,0 +1,124 @@
+
+.modal-ruleta {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-ruleta.activo {
+    display: flex;
+}
+
+.contenedor-ruleta {
+    background: #1a1a1a;
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 2px solid #ffd700;
+}
+
+.titulo-ruleta {
+    font-size: 1.8em;
+    color: #ffd700;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.envoltura-ruleta {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 25px;
+}
+
+.lienzo-ruleta {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.indicador-ruleta {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #ffd700;
+    z-index: 10;
+}
+
+.boton-ruleta {
+    background: #ffd700;
+    color: #000;
+    padding: 12px 35px;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 15px;
+}
+
+.boton-ruleta:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.boton-ruleta:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+.descuento-resultado {
+    font-size: 1.6em;
+    color: #ffd700;
+    font-weight: 700;
+}
+
+.texto-resultado {
+    font-size: 0.9em;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.cerrar-ruleta {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.6em;
+    color: #ffd700;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.cerrar-ruleta:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .envoltura-ruleta {
+        width: 250px;
+        height: 250px;
+    }
+
+    .titulo-ruleta {
+        font-size: 1.5em;
+    }
+}
