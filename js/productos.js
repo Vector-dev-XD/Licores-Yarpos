@@ -1,4 +1,3 @@
-
 const wheelPrizes = [
     { discount: 10, color: '#1a5d2a' },
     { discount: 15, color: '#2d7a3a' },
@@ -15,21 +14,21 @@ let wheelRotation = 0;
 
 function createWheel() {
     const wheelHTML = `
-        <div class="wheel-modal" id="wheelModal">
-            <div class="wheel-container">
-                <button class="close-wheel" onclick="closeWheel()">×</button>
-                <h2 class="wheel-title">GIRA Y GANA</h2>
+        <div class="modal-ruleta" id="wheelModal">
+            <div class="contenedor-ruleta">
+                <button class="cerrar-ruleta" onclick="closeWheel()">×</button>
+                <h2 class="titulo-ruleta">GIRA Y GANA</h2>
                 
-                <div class="wheel-wrapper">
-                    <div class="wheel-pointer"></div>
-                    <canvas class="wheel-canvas" id="wheelCanvas" width="300" height="300"></canvas>
+                <div class="envoltura-ruleta">
+                    <div class="indicador-ruleta"></div>
+                    <canvas class="lienzo-ruleta" id="wheelCanvas" width="300" height="300"></canvas>
                 </div>
 
-                <button class="wheel-button" id="spinBtn" onclick="spinWheel()">GIRAR</button>
+                <button class="boton-ruleta" id="spinBtn" onclick="spinWheel()">GIRAR</button>
                 
-                <div class="result-message" id="resultMessage">
-                    <div class="result-discount" id="discountAmount"></div>
-                    <div class="result-text">Descuento obtenido</div>
+                <!-- Resultado eliminado visualmente -->
+                <div class="mensaje-resultado" id="resultMessage" style="display:none;">
+                    <div class="descuento-resultado" id="discountAmount"></div>
                 </div>
             </div>
         </div>
@@ -56,7 +55,6 @@ function drawWheel() {
         const startAngle = index * sliceAngle;
         const endAngle = startAngle + sliceAngle;
 
-        // Dibujar segmento
         ctx.fillStyle = index % 2 === 0 ? '#1a5d2a' : '#0f4620';
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, startAngle, endAngle);
@@ -67,7 +65,6 @@ function drawWheel() {
         ctx.lineWidth = 2;
         ctx.stroke();
 
-        // Dibujar texto
         ctx.save();
         ctx.translate(centerX, centerY);
         ctx.rotate(startAngle + sliceAngle / 2);
@@ -79,17 +76,14 @@ function drawWheel() {
     });
 }
 
-// Girar la ruleta
 function spinWheel() {
     if (isSpinning) return;
 
     const spinBtn = document.getElementById('spinBtn');
-    const resultMessage = document.getElementById('resultMessage');
     const canvas = document.getElementById('wheelCanvas');
 
     isSpinning = true;
     spinBtn.disabled = true;
-    resultMessage.classList.remove('show');
 
     const spins = Math.floor(Math.random() * 5) + 8;
     const extraDegrees = Math.floor(Math.random() * 360);
@@ -145,42 +139,31 @@ function spinWheel() {
         if (progress < 1) {
             requestAnimationFrame(animate);
         } else {
-            const normalizedRotation = wheelRotation % 360;
-            const segmentIndex = Math.floor((360 - normalizedRotation) / (360 / wheelPrizes.length)) % wheelPrizes.length;
-            const prize = wheelPrizes[segmentIndex];
-
-            document.getElementById('discountAmount').textContent = `${prize.discount}% OFF`;
-            resultMessage.classList.add('show');
-
-            localStorage.setItem('wheelDiscount', prize.discount);
-            // Ocultar el botón de girar en esta sesión (aparecerá de nuevo al recargar)
-            if (spinBtn) spinBtn.style.display = 'none';
+            // Resultado eliminado
+            // NO se muestra nada visual
+            // NO se rellena el mensaje
 
             isSpinning = false;
+            spinBtn.style.display = 'none';
         }
     }
 
     animate();
 }
 
-// Cerrar ruleta
 function closeWheel() {
     const wheelModal = document.getElementById('wheelModal');
-    wheelModal.classList.remove('active');
+    wheelModal.classList.remove('activo');
 }
 
-// Inicializar cuando carga la página
 document.addEventListener('DOMContentLoaded', function() {
     createWheel();
     setTimeout(() => {
         const wheelModal = document.getElementById('wheelModal');
-        if (wheelModal) {
-            wheelModal.classList.add('active');
-        }
+        if (wheelModal) wheelModal.classList.add('activo');
     }, 500);
 });
 
-// Cerrar al hacer click fuera
 document.addEventListener('click', function(event) {
     const wheelModal = document.getElementById('wheelModal');
     if (wheelModal && event.target === wheelModal) {
