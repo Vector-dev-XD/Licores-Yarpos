@@ -8,11 +8,23 @@
 .pantalla{
     width: 100%;
     min-height: 100vh;
-    background-color: #222;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
+}
+
+.pantalla::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+        125% 125% at 50% 10%,
+        #222 40%,
+        #453203 100%
+    );
 }
 
 .card-container{

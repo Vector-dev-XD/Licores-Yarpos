@@ -23,6 +23,79 @@ header {
   z-index: 12;
 }
 
+
+.nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 3px;
+    background: #e6b800;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.nav a:hover::after {
+    width: 80%;
+}
+
+.nav a.active {
+    background-color: #e6b800;
+    color: #222;
+}
+
+.nav a.active::after {
+    width: 80%;
+}
+
+
+.opciondes li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.opciondes li a:hover {
+    padding-left: 20px;
+}
+
+.sideOption.active {
+    background-color: #e6b800 !important;
+    color: #222 !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 210, 70, 0.4);
+}
+
+.sideOption:hover {
+    background-color: #f1c24c !important;
+    transform: translateX(5px) scale(1.04);
+    color: #222;
+}
+
+.sideOption .sideOpIcon {
+    transition: transform 0.3s ease;
+}
+
+.sideOption:hover .sideOpIcon {
+    transform: rotate(-5deg) scale(1.15);
+}
+
+.navItems a, .desple > a {
+    animation: fadeDown 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeDown {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 .menu{
   border-radius: 5px;
   padding: 6px;
@@ -50,6 +123,7 @@ header {
   height: 50px;
   padding: 10px;
   display: flex;
+  border: none;
   font-family: Arial, sans-serif;
   align-items: center;
   border-radius: 5px;
@@ -111,6 +185,7 @@ a{
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  transition: all 0.5s ease;
 }
 
 .nav a:hover {
