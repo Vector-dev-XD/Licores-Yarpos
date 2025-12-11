@@ -20,11 +20,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: radial-gradient(
-        125% 125% at 50% 10%,
-        #222 40%,
-        #453203 100%
-    );
+    background-color: #edededed;
 }
 
 .card-container{
