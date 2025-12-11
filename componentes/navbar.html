@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar-container">
+    <input type="checkbox" id="sideOption" hidden>
+    <header class="header">
+      <label for="sideOption">
+        <div class="menu" hidden>
+            <img class="menuIcon" src="./img/inicio/menuIcon.png" >
+        </div>
+      </label>
+      <img src="img/YarposLogo.png" class="logo" />
+      <nav class="nav">
+        <div class="navItems" hidden>
+          <a href="./home.html">Inicio</a>
+          <a href="./productos.html">Productos</a>
+          <div class="desple">
+            <a href="#">Sobre Nosotros</a>
+            <ul class="opciondes">
+              <li><a href="#">Visión</a></li>
+              <li><a href="#">Misión</a></li>
+              <li><a href="#">Historia</a></li>
+            </ul>
+          </div>
+          <a href="contact.html">Contactos</a>
+        </div>
+      </nav>
+    </header>
+    <aside id="sideBar">
+      <ul class="sideMenu">
+        <li>
+          <button class="sideOption" onclick="window.location.href='/home.html'">
+              <img src="./img/inicio/homeIcon.png" class="sideOpIcon"><a href="#">Inicio</a>
+          </button>
+        </li>
+        <li>
+          <button class="sideOption" onclick="window.location.href='/productos.html'">
+              <img src="./img/inicio/boxIcon.png" class="sideOpIcon"><a href="#">Productos</a>
+            </button>
+        </li>
+        <li>
+          <button class="sideOption" onclick="window.location.href='/aboutUs.html'">
+              <img src="./img/inicio/aboutUsIcon.png" class="sideOpIcon"><a href="#">Sobre Nosotros</a>
+            </button>
+        </li>
+        <li>
+          <button class="sideOption" onclick="window.location.href='/contact.html'">
+              <img src="./img/inicio/contactIcon.png" class="sideOpIcon"><a href="#">Contacto</a>
+            </button>
+        </li>
+      </ul>
+    </aside>
+</div>
+
+</body>
+</html>
