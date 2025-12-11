@@ -92,7 +92,6 @@ iframe{
     border: 1px solid #b2bdc0;
     background-color: white;
     border-radius: 1.3rem;
-    padding: 0.5rem;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -103,7 +102,10 @@ iframe{
 }
 
 .cardback{
-    width: 100%;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 95%;
     height: 4rem;
     background: linear-gradient(-45deg, #ffdc84, #eaba42,#b88400);
     border-radius: 0.8rem;
@@ -114,6 +116,7 @@ iframe{
 .card-info-container{
     font-size: 0.8rem;
     position: absolute;
+    bottom: 1rem;
     left: 6.5rem;
 }
 
