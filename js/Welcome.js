@@ -1,4 +1,3 @@
-// Verificar edad al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
     verificarEdad();
 });

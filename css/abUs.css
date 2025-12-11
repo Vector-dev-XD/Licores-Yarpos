@@ -1,4 +1,4 @@
-/* Reset */
+
 *{
     margin: 0;
     padding: 0;
@@ -70,7 +70,7 @@
     height: 20rem;
 }
 
-/* Imágenes */
+
 .vision-inner img,
 .mision-inner img{
     width: clamp(80px, 25%, 150px);
@@ -78,7 +78,6 @@
     margin-bottom: 1rem;
 }
 
-/* Textos */
 .vision-text-container,
 .mision-text-container {
     text-align: center;
@@ -95,7 +94,7 @@
     line-height: 1.5;
 }
 
-/* Responsive */
+
 @media(max-width: 768px){
     .pantalla {
         padding: 20px;
