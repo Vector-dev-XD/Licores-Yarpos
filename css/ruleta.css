@@ -144,3 +144,73 @@
     background: #b8922c;
     transform: scale(1.05);
 }
+
+
+@media (max-width: 375px) {
+
+    .contenedor-ruleta {
+        padding: 20px;
+        max-width: 320px;
+    }
+
+    .envoltura-ruleta {
+        width: 220px;
+        height: 220px;
+    }
+
+    canvas#wheelCanvas {
+        width: 220px !important;
+        height: 220px !important;
+    }
+
+    .titulo-ruleta {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .boton-ruleta {
+        padding: 10px 28px;
+        font-size: 0.9em;
+    }
+
+    .indicador-ruleta {
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 20px solid #ffd700;
+        top: -12px;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .contenedor-ruleta {
+        padding: 25px;
+        max-width: 420px;
+    }
+
+    .envoltura-ruleta {
+        width: 260px;
+        height: 260px;
+    }
+
+    canvas#wheelCanvas {
+        width: 260px !important;
+        height: 260px !important;
+    }
+
+    .titulo-ruleta {
+        font-size: 1.4em;
+    }
+
+    .boton-ruleta {
+        padding: 11px 32px;
+        font-size: 1em;
+    }
+
+    .indicador-ruleta {
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 22px solid #ffd700;
+        top: -13px;
+    }
+}
