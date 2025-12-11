@@ -143,6 +143,10 @@
     flex-direction: column;
 }
 
+.card-details p{
+    font-size: 0.9rem;
+}
+
 .title-product{
     width: 100%;
     line-height: 30px;
