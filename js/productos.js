@@ -2,7 +2,7 @@ const wheelPrizes = [
     { discount: 10, color: '#1a5d2a' },
     { discount: 15, color: '#2d7a3a' },
     { discount: 20, color: '#0f4620' },
-    { discount: 5, color: '#1a5d2a' },
+    { discount: 5,  color: '#1a5d2a' },
     { discount: 25, color: '#2d7a3a' },
     { discount: 30, color: '#0f4620' },
     { discount: 50, color: '#1a5d2a' },
@@ -12,139 +12,128 @@ const wheelPrizes = [
 let isSpinning = false;
 let wheelRotation = 0;
 
+window.addEventListener("load", () => {
+    localStorage.removeItem("wheelUsed");
+    localStorage.removeItem("finalRotation");
+    createWheel();
+});
+
 function createWheel() {
+    isSpinning = false;
+
+    const old = document.getElementById("wheelModal");
+    if (old) old.remove();
+
     const wheelHTML = `
         <div class="modal-ruleta" id="wheelModal">
             <div class="contenedor-ruleta">
                 <button class="cerrar-ruleta" onclick="closeWheel()">×</button>
                 <h2 class="titulo-ruleta">GIRA Y GANA</h2>
-                
+
                 <div class="envoltura-ruleta">
                     <div class="indicador-ruleta"></div>
-                    <canvas class="lienzo-ruleta" id="wheelCanvas" width="300" height="300"></canvas>
+                    <canvas id="wheelCanvas" width="300" height="300"></canvas>
                 </div>
 
                 <button class="boton-ruleta" id="spinBtn" onclick="spinWheel()">GIRAR</button>
-                
-                <!-- Resultado eliminado visualmente -->
-                <div class="mensaje-resultado" id="resultMessage" style="display:none;">
-                    <div class="descuento-resultado" id="discountAmount"></div>
-                </div>
             </div>
         </div>
     `;
-    
-    document.body.insertAdjacentHTML('beforeend', wheelHTML);
-    drawWheel();
 
+    document.body.insertAdjacentHTML('beforeend', wheelHTML);
+
+    const savedRotation = localStorage.getItem("finalRotation");
+    if (savedRotation) {
+        drawWheel(parseFloat(savedRotation));
+        const btn = document.getElementById("spinBtn");
+        btn.disabled = true;
+        btn.innerText = "YA GIRASTE";
+        btn.style.display = "none";
+    } else {
+        drawWheel(0);
+    }
+
+    setTimeout(() => {
+        document.getElementById("wheelModal").classList.add("activo");
+    }, 50);
 }
 
-function drawWheel() {
-    const canvas = document.getElementById('wheelCanvas');
+function drawWheel(rotation = 0) {
+    const canvas = document.getElementById("wheelCanvas");
     if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, 300, 300);
+    ctx.save();
+
+    ctx.translate(150, 150);
+    ctx.rotate(rotation * Math.PI / 180);
+    ctx.translate(-150, -150);
+
     const radius = 150;
-    const centerX = 150;
-    const centerY = 150;
     const sliceAngle = (2 * Math.PI) / wheelPrizes.length;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    wheelPrizes.forEach((prize, i) => {
+        const start = i * sliceAngle;
+        const end = start + sliceAngle;
 
-    wheelPrizes.forEach((prize, index) => {
-        const startAngle = index * sliceAngle;
-        const endAngle = startAngle + sliceAngle;
+        ctx.fillStyle = (i % 2 === 0) ? "#1a5d2a" : "#0f4620";
 
-        ctx.fillStyle = index % 2 === 0 ? '#1a5d2a' : '#0f4620';
         ctx.beginPath();
-        ctx.arc(centerX, centerY, radius, startAngle, endAngle);
-        ctx.lineTo(centerX, centerY);
+        ctx.arc(150, 150, radius, start, end);
+        ctx.lineTo(150, 150);
         ctx.fill();
-        
-        ctx.strokeStyle = '#ffd700';
+
+        ctx.strokeStyle = "#ffd700";
         ctx.lineWidth = 2;
         ctx.stroke();
 
         ctx.save();
-        ctx.translate(centerX, centerY);
-        ctx.rotate(startAngle + sliceAngle / 2);
-        ctx.textAlign = 'right';
-        ctx.fillStyle = '#ffd700';
-        ctx.font = 'bold 18px Poppins';
-        ctx.fillText(`${prize.discount}%`, radius - 30, 6);
+        ctx.translate(150, 150);
+        ctx.rotate(start + sliceAngle / 2);
+        ctx.textAlign = "right";
+        ctx.fillStyle = "#ffd700";
+        ctx.font = "bold 18px Poppins";
+        ctx.fillText(prize.discount + "%", 120, 6);
         ctx.restore();
     });
+
+    ctx.restore();
 }
 
 function spinWheel() {
+    if (localStorage.getItem("wheelUsed") === "true") return;
     if (isSpinning) return;
 
-    const spinBtn = document.getElementById('spinBtn');
-    const canvas = document.getElementById('wheelCanvas');
-
     isSpinning = true;
+
+    const spinBtn = document.getElementById("spinBtn");
     spinBtn.disabled = true;
 
     const spins = Math.floor(Math.random() * 5) + 8;
-    const extraDegrees = Math.floor(Math.random() * 360);
-    const finalRotation = spins * 360 + extraDegrees;
+    const extra = Math.floor(Math.random() * 360);
+    const finalRotation = spins * 360 + extra;
 
-    wheelRotation += finalRotation;
-
-    const startTime = Date.now();
+    const start = Date.now();
     const duration = 4000;
 
     function animate() {
-        const elapsed = Date.now() - startTime;
+        const elapsed = Date.now() - start;
         const progress = Math.min(elapsed / duration, 1);
-        
-        const easeProgress = 1 - Math.pow(1 - progress, 3);
-        const currentRotation = wheelRotation - (finalRotation * (1 - easeProgress));
-        
-        const ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.save();
-        ctx.translate(150, 150);
-        ctx.rotate((currentRotation * Math.PI) / 180);
-        ctx.translate(-150, -150);
+        const ease = 1 - Math.pow(1 - progress, 3);
 
-        const sliceAngle = (2 * Math.PI) / wheelPrizes.length;
+        const current = ease * finalRotation;
+        wheelRotation = current % 360;
 
-        wheelPrizes.forEach((prize, index) => {
-            const startAngle = index * sliceAngle;
-            const endAngle = startAngle + sliceAngle;
-            
-            ctx.fillStyle = index % 2 === 0 ? '#1a5d2a' : '#0f4620';
-            ctx.beginPath();
-            ctx.arc(150, 150, 150, startAngle, endAngle);
-            ctx.lineTo(150, 150);
-            ctx.fill();
-            
-            ctx.strokeStyle = '#ffd700';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-
-            ctx.save();
-            ctx.translate(150, 150);
-            ctx.rotate(startAngle + sliceAngle / 2);
-            ctx.textAlign = 'right';
-            ctx.fillStyle = '#ffd700';
-            ctx.font = 'bold 18px Poppins';
-            ctx.fillText(`${prize.discount}%`, 120, 6);
-            ctx.restore();
-        });
-
-        ctx.restore();
+        drawWheel(wheelRotation);
 
         if (progress < 1) {
             requestAnimationFrame(animate);
         } else {
-            // Resultado eliminado
-            // NO se muestra nada visual
-            // NO se rellena el mensaje
-
-            isSpinning = false;
-            spinBtn.style.display = 'none';
+            spinBtn.style.display = "none";
+            localStorage.setItem("wheelUsed", "true");
+            localStorage.setItem("finalRotation", wheelRotation);
         }
     }
 
@@ -152,21 +141,14 @@ function spinWheel() {
 }
 
 function closeWheel() {
-    const wheelModal = document.getElementById('wheelModal');
-    wheelModal.classList.remove('activo');
+    const modal = document.getElementById("wheelModal");
+    modal.classList.remove("activo");
+
+    setTimeout(() => modal.remove(), 300);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    createWheel();
-    setTimeout(() => {
-        const wheelModal = document.getElementById('wheelModal');
-        if (wheelModal) wheelModal.classList.add('activo');
-    }, 500);
-});
-
-document.addEventListener('click', function(event) {
-    const wheelModal = document.getElementById('wheelModal');
-    if (wheelModal && event.target === wheelModal) {
-        closeWheel();
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-ruleta-flotante")) {
+        createWheel();
     }
 });
