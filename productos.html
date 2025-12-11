@@ -27,17 +27,7 @@
             <div class="text-container">
                 <p>Productos destacado</p>
             </div>
-            <div class="products-display">
-                <div class="product-card">
-                    <img src="img/productsExhibition/14.png" class="product-image" >
-                    <div class="card-details">
-                        <p class="title-product"><b>Ron Plata Premium</b></p>
-                        <p class="price-product">130 L.</p>
-                        <div class="button-vm-container">
-                            <a href="/productos/ron.html" class="see-more" id="ver">Ver más</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="products-display" id="productList">
                 <div class="product-card">
                     <img src="img/productsExhibition/15.png" class="product-image">
                     <div class="card-details">
@@ -50,6 +40,16 @@
                     <div class="liston-recorten">
                         <div class="liston-dorado">
                             <p>MAS VENDIDO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="img/productsExhibition/14.png" class="product-image" >
+                    <div class="card-details">
+                        <p class="title-product"><b>Ron Plata Premium</b></p>
+                        <p class="price-product">130 L.</p>
+                        <div class="button-vm-container">
+                            <a href="/productos/ron.html" class="see-more" id="ver">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="img/productsExhibition/18.png" class="product-image">
+                    <img src="img/productsExhibition/BarrilitoCover.png" class="product-image">
                     <div class="card-details">
                         <p class="title-product"><b>Barrilito</b></p>
                         <p class="price-product">57-18 L.</p>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="img/productsExhibition/18.png" class="product-image">
+                    <img src="img/productsExhibition/caballitoCover.png" class="product-image">
                     <div class="card-details">
                         <p class="title-product"><b>Caballito</b></p>
                         <p class="price-product">57-18 L.</p>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="img/productsExhibition/18.png" class="product-image">
+                    <img src="img/productsExhibition/elMjorCover.png" class="product-image">
                     <div class="card-details">
                         <p class="title-product"><b>El mejor</b></p>
                         <p class="price-product">57-22 L.</p>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="img/productsExhibition/18.png" class="product-image">
+                    <img src="img/productsExhibition/KLCover.png" class="product-image">
                     <div class="card-details">
                         <p class="title-product"><b>XL Colors</b></p>
                         <p class="price-product">125 L.</p>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="img/productsExhibition/18.png" class="product-image">
+                    <img src="img/productsExhibition/YuscaLitrosCover.png" class="product-image">
                     <div class="card-details">
                         <p class="title-product"><b>YuscaLitro</b></p>
                         <p class="price-product">104 L.</p>
@@ -144,12 +144,13 @@
                     </div>
                 </div>
             </div>
+            <div class="pagination" id="pagination"></div>
         </div>
     </div>
     <div id="footer-container">
     
 </div>
-
+<script src="js/pagination.js"></script>
 <script src="js/loadcomponents.js"></script>
 <script src="js/scrollBehavior.js"></script>
 </body>

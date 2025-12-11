@@ -96,7 +96,7 @@
     height: 35vw;
     border-radius: 0px 0px 25px 25px;
     background: linear-gradient(-45deg, #ffdc84, #eaba42,#b88400);
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 .back-image{
@@ -108,9 +108,6 @@
     transition: transform 0.5s ease;
 }
 
-.back-image:hover{
-    transform: translateY(-10px) rotate(5deg);
-}
 
 .tag-container{
     width: 100%;
