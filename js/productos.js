@@ -15,7 +15,6 @@ let wheelRotation = 0;
 window.addEventListener("load", () => {
     localStorage.removeItem("wheelUsed");
     localStorage.removeItem("finalRotation");
-    createWheel();
 });
 
 function createWheel() {
