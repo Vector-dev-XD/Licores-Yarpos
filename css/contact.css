@@ -1,154 +1,288 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.pantalla{
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: auto;
-    position: relative;
-    width: 100%;
-    background-color: #ededed;
-    font-family: "Poppins", sans-serif;
-    z-index: 3;
-    overflow: hidden;
+.pantalla {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  position: relative;
+  width: 100%;
+  background-color: #ededed;
+  font-family: "Poppins", sans-serif;
+  z-index: 3;
+  overflow: hidden;
 }
 
-.img-header{
-    grid-column: 1/7;
-    grid-row: 1/2;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    animation: fadeUp 1s ease forwards;
+.img-header {
+  grid-column: 1/7;
+  grid-row: 1/2;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  animation: fadeUp 1s ease forwards;
 }
 
-.contactDisplay{
-    width: 100%;
-    height: 45vh;
-    object-fit: cover;
+.contactDisplay {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
 }
 
-.capa{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 45vh;
-    background-color: black;
-    opacity: 0.4;
-    padding-top: 5em;
+.capa {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 45vh;
+  background-color: black;
+  opacity: 0.4;
+  padding-top: 5em;
 }
 
-.img-header h1{
-    position: absolute;
-    top: 6.5rem;
-    left: 2.5rem;
-    color: white;
-    font-size: 3em;
-    width: 100%;
-    letter-spacing: 0.7rem;
+.img-header h1 {
+  position: absolute;
+  top: 6.5rem;
+  left: 2.5rem;
+  color: white;
+  font-size: 3em;
+  width: 100%;
+  letter-spacing: 0.7rem;
 }
 
-.contact-container{
-    width: 100%;
-    grid-column: 1/7;
-    grid-row: 2/3;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 1.5rem;
-    animation: fadeUp 1s ease forwards;
+.contact-container {
+  width: 100%;
+  grid-column: 1/7;
+  grid-row: 2/3;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 1.5rem;
+  animation: fadeUp 1s ease forwards;
 }
 
-iframe{
-    width: 100%;
-    height: 50vh;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    animation: fadeUp 1.2s ease-out forwards;
+iframe {
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeUp 1.2s ease-out forwards;
 }
 
-.contact-info-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    animation: fadeUp 1s ease forwards;
+.contact-info-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  animation: fadeUp 1s ease forwards;
 }
 
-.contact-cards{
-    width: 22rem;
-    display: flex;
-    margin-bottom: 3vh;
+.contact-cards {
+  width: 22rem;
+  display: flex;
+  margin-bottom: 3vh;
 }
 
-.card{
-    width: 100%;
-    height:9rem;
-    position: relative;
-    border: 1px solid #b2bdc0;
-    background-color: white;
-    border-radius: 1.3rem;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.card {
+  width: 100%;
+  height: 9rem;
+  position: relative;
+  border: 1px solid #b2bdc0;
+  background-color: white;
+  border-radius: 1.3rem;
+  padding: 0.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card:hover{
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    cursor: pointer;
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
-.cardback{
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    width: 95%;
-    height: 4rem;
-    background: linear-gradient(-45deg, #ffdc84, #eaba42,#b88400);
-    border-radius: 0.8rem;
-    transition: filter 0.25s ease;
+.cardback {
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(-45deg, #ffdc84, #eaba42, #b88400);
+  border-radius: 0.8rem;
+  transition: filter 0.25s ease;
 }
 
-
-.card-info-container{
-    font-size: 0.8rem;
-    position: absolute;
-    bottom: 1rem;
-    left: 6.5rem;
+.card-info-container {
+  font-size: 0.8rem;
+  position: absolute;
+  left: 6.5rem;
 }
 
-.card:hover .cardback{
-    filter: brightness(1.08);
+.card:hover .cardback {
+  filter: brightness(1.08);
 }
 
-.icon-circle-container{
-    background-color: #2c2823;
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    transform: translateY(50%);
-    top: -8%;
-    left: 5%;
-    display: flex;
-    padding: 1.5rem;
-    border-radius: 3rem;
-    transition: transform 0.25s ease;
+.icon-circle-container {
+  background-color: #2c2823;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  transform: translateY(50%);
+  top: -8%;
+  left: 5%;
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  transition: transform 0.25s ease;
 }
 
-.card:hover .icon-circle-container{
-    transform: translateY(50%) scale(1.07);
+.card:hover .icon-circle-container {
+  transform: translateY(50%) scale(1.07);
 }
 
 @keyframes fadeUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 780px) {
+  .pantalla {
+    padding-top: 20px;
+  }
+
+  .contactDisplay {
+    height: 35vh;
+  }
+
+  .capa {
+    height: 35vh;
+  }
+
+  .img-header h1 {
+    font-size: 2.2em;
+    top: 5rem;
+    left: 1.5rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .contact-container {
+    padding-top: 1rem;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  iframe {
+    height: 40vh;
+  }
+
+  .contact-info-container {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .contact-cards {
+    width: 18rem;
+    margin-bottom: 2vh;
+  }
+
+  .card {
+    height: 9rem;
+  }
+
+  .icon-circle-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1.2rem;
+  }
+
+  .card-info-container {
+    font-size: 0.75rem;
+    left: 6rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .pantalla {
+    padding-top: 10px;
+  }
+
+  .contactDisplay {
+    height: 30vh;
+  }
+
+  .capa {
+    height: 30vh;
+  }
+
+  .img-header h1 {
+    font-size: 1.8em;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  .contact-container {
+    padding-top: 1rem;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .contact-container h1 {
+    text-align: center;
+  }
+
+  iframe {
+    height: 40vh;
+    border-radius: 10px;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-cards {
+    width: 95%;
+    max-width: 350px;
+    margin-bottom: 1vh;
+  }
+
+  .card {
+    height: 9rem;
+    border-radius: rem;
+  }
+
+  .cardback {
+    height: 4rem;
+    margin-top: -1.4rem;
+  }
+
+  .icon-circle-container {
+    width: 5rem;
+    height: 5rem;
+    padding: 1.5rem;
+    left: 7%;
+  }
+
+  .card-info-container {
+    position: absolute;
+    left: 6.6rem;
+    margin-top: 3px;
+  }
+
+  .card-info-container p {
+    font-size: 0.75rem;
+  }
+
+  .card-info-container h2 {
+    font-size: 1.5em;
+  }
+  
 }
