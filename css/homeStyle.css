@@ -1,14 +1,4 @@
-/* VARIABLES DE COLOR - PALETA YUSCARÁN */
-:root {
-    --primary-green: #2d7a3a;      /* Verde principal (botella) */
-    --secondary-yellow: #f4d03f;   /* Amarillo secundario (etiqueta) */
-    --accent-light: #f9f9f9;       /* Blanco/Crema claro */
-    --text-dark: #1a1a1a;          /* Texto oscuro */
-    --border-light: #e8e8e8;       /* Bordes claros */
-    --green-hover: #1f5228;        /* Verde oscuro para hover */
-}
 
-/* ESTILOS GENERALES Y FUENTES */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -18,18 +8,17 @@ body {
     scroll-behavior: smooth;
 }
 
-/* CONTENEDOR CENTRAL */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* TIPOGRAFÍA */
 h1, h2 {
     font-family: 'Poppins', sans-serif;
     color: var(--primary-green);
-    text-align: center;
+    text-align: start;
     margin-bottom: 20px;
 }
 
@@ -68,7 +57,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 4px solid var(--secondary-yellow);
+    border-bottom: 4px solid #f4d03f;
 }
 
 .hero-content {
@@ -84,29 +73,25 @@ section {
 
 .hero-subtitle {
     font-size: 1.3em;
-    color: var(--secondary-yellow);
+    color: #f4d03f;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
-/* Placeholder para la imagen */
 .image-placeholder {
     flex: 1;
-    max-width: 400px;
+    max-width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.25);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid var(--secondary-yellow);
 }
 
 .hero-image {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
 }
@@ -123,7 +108,7 @@ section {
 
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, var(--secondary-yellow) 0%, #e6c92d 100%);
+    background: linear-gradient(135deg, #f4d03f 0%, #e6c92d 100%);
     color: var(--primary-green);
     padding: 15px 40px;
     text-decoration: none;
@@ -141,16 +126,14 @@ section {
     box-shadow: 0 10px 20px rgba(244, 208, 63, 0.3);
 }
 
-
-/* --- SECCIÓN DE CARACTERÍSTICAS --- */
 .features {
-    background-color: var(--accent-light);
+    background-color: #222;
     padding: 100px 0;
     border-top: 2px solid var(--border-light);
 }
 
 .features h2 {
-    color: var(--primary-green);
+    color: white;
     margin-bottom: 60px;
 }
 
@@ -167,7 +150,7 @@ section {
     text-align: center;
     box-shadow: 0 10px 30px rgba(45, 122, 58, 0.1);
     transition: all 0.3s ease;
-    border-top: 4px solid var(--secondary-yellow);
+    border-top: 4px solid #f4d03f;
 }
 
 .feature-card:hover {
@@ -190,7 +173,6 @@ section {
     line-height: 1.8;
 }
 
-/* --- SECCIÓN DE COMENTARIOS DE CLIENTES --- */
 .testimonials {
     background: linear-gradient(135deg, var(--primary-green) 0%, #1f5228 100%);
     color: var(--accent-light);
@@ -198,7 +180,7 @@ section {
 }
 
 .testimonials h2 {
-    color: var(--secondary-yellow);
+    color: #f4d03f;
     margin-bottom: 60px;
 }
 
@@ -217,7 +199,7 @@ section {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     text-align: left;
     transition: all 0.3s ease;
-    border-left: 4px solid var(--secondary-yellow);
+    border-left: 4px solid #f4d03f;
 }
 
 .card:hover {
@@ -237,7 +219,7 @@ section {
 .quote::before, .quote::after {
     content: '"';
     font-size: 2.5em;
-    color: var(--secondary-yellow);
+    color: #f4d03f;
     line-height: 0;
     position: absolute;
     opacity: 0.6;
@@ -261,7 +243,7 @@ section {
     margin-top: 15px;
 }
 
-/* --- 3. SECCIÓN DE ORIGEN DE LA EMPRESA --- */
+
 .about {
     background-color: var(--accent-light);
     color: var(--text-dark);
@@ -287,6 +269,7 @@ section {
 .about-text p {
     color: #555;
     line-height: 1.9;
+    text-align: start;
 }
 
 .about-text strong {
@@ -299,7 +282,7 @@ section {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(45, 122, 58, 0.15);
-    border: 3px solid var(--secondary-yellow);
+    border: 3px solid #f4d03f;
 }
 
 .responsive-image {
@@ -308,20 +291,15 @@ section {
     display: block;
 }
 
-/* PIE DE PÁGINA */
+
 .footer {
     background: linear-gradient(135deg, var(--primary-green) 0%, #1f5228 100%);
-    color: var(--secondary-yellow);
+    color: #f4d03f;
     padding: 30px 0;
     text-align: center;
     font-size: 0.95em;
 }
 
-/* ==================================== */
-/* ANIMACIONES CSS            */
-/* ==================================== */
-
-/* Keyframes para animaciones de entrada */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -342,24 +320,23 @@ section {
     to { transform: scale(1); }
 }
 
-/* Aplicación de animaciones */
+
 .fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
 .slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
 .zoom-in { animation: zoomIn 0.8s ease-out forwards; opacity: 0; }
 .scale-up { animation: scaleUp 0.8s ease-out forwards; opacity: 1; }
 
-/* Control de retraso (Delay) */
+
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
 .delay-4 { animation-delay: 0.8s; }
 
-/* Asegurar que las animaciones se activen al cargar */
+
 .hero, .card, .about-image {
-    opacity: 0; /* Inicialmente oculto para que la animación se muestre */
+    opacity: 0; 
 }
 
-/* MEDIA QUERIES PARA RESPONSIVE */
 @media (max-width: 900px) {
     h1 {
         font-size: 2.5em;
